@@ -6,35 +6,25 @@ import Container from "react-bootstrap/esm/Container";
 // import { GoogleLogout } from "react-google-login";
 import "../styles/header.css";
 
-const Header = ({button}) => {
- 
-
+const Header = ({ button }) => {
   return (
-<div className="mb-auto">
-    <header>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Container>
-          <Nav>
-            <Nav.Item>
-              <Navbar.Brand href="/">Pokemon</Navbar.Brand>
-            </Nav.Item>
-          </Nav>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse
-            id="responsive-navbar-nav"
-            className="justify-content-end float-md-end"
-          >
+    <div className="mb-auto">
+      <header>
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+          <Container>
             <Nav>
-              <Nav.Link href="/poke-random">Generator</Nav.Link>
-              <Nav.Link href="/poke-search">Search</Nav.Link>
-              <Nav.Item>{button()}</Nav.Item>
+              <Nav.Item>
+                <Navbar.Brand href="/">Pokemon</Navbar.Brand>
+              </Nav.Item>
             </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </header>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end float-md-end">
+              {button()}
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+      </header>
     </div>
-
   );
 };
 

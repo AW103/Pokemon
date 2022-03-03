@@ -3,10 +3,9 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import poke from "../api/poke";
-import PokeCard from "./PokeCard";
+import PokeCard from "./RenderAbilities";
 
 const PokeRandom = () => {
-  const [defaultText, setDefaultText] = useState("Click the button to generate a pokemon!");
   const [pokemon, setPokemon] = useState([]);
 
   const handleClick = async () => {
@@ -21,7 +20,7 @@ const PokeRandom = () => {
     <Container className="jumbotron text-center mb-auto">
       <Row>
         <div>
-          <h3>{defaultText}</h3>
+          <h3>Click the button to generate a pokemon!</h3>
           <Button onClick={handleClick}>Generate Pokemon</Button>
         </div>
       </Row>
@@ -33,4 +32,3 @@ const PokeRandom = () => {
 };
 
 export default PokeRandom;
-
